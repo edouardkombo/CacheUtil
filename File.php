@@ -126,7 +126,8 @@ class File extends HandleAbstraction
             fclose($handle);
             return (string) unserialize($cache);
         } catch (\RuntimeException $ex) {
-            $ex->getMessage();
+            echo $ex->getMessage();
+            exit();
         }
     }
 
